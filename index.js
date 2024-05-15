@@ -1,7 +1,11 @@
 require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors'); // Import the cors package
 const app = express();
+
+// Use the cors middleware
+app.use(cors());
 
 const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 
